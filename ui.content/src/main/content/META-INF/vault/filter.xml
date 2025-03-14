@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/myaempractice" mode="merge"/>
+    <filter root="/content/myaempractice" mode="merge"/>
+    <filter root="/content/dam/myaempractice" mode="merge">
+        <exclude pattern="/content/dam/myaempractice(/.*)?"/>
+        <include pattern="/content/dam/myaempractice/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/myaempractice/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/myaempractice" mode="merge"/>
+</workspaceFilter>
