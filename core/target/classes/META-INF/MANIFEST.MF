@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+Bundle-Category: My AEM Practice
+Bundle-Description: Core bundle for My AEM Practice
+Bundle-ManifestVersion: 2
+Bundle-Name: My AEM Practice - Core
+Bundle-SymbolicName: myaempractice.core
+Bundle-Version: 1.0.0.SNAPSHOT
+Export-Package: com.myaempractice.core.filters;version="1.0";uses:="ja
+ vax.servlet",com.myaempractice.core.listeners;version="1.0";uses:="or
+ g.apache.sling.api.resource.observation",com.myaempractice.core.model
+ s;version="1.0";uses:="javax.annotation,org.apache.sling.api.resource
+ ,org.apache.sling.models.annotations,org.apache.sling.models.annotati
+ ons.injectorspecific",com.myaempractice.core.schedulers;version="1.0"
+ ,com.myaempractice.core.servlets;version="1.0";uses:="javax.servlet,o
+ rg.apache.sling.api,org.apache.sling.api.servlets"
+Import-Package: javax.annotation;version="0.0.0",com.day.cq.wcm.api;ve
+ rsion="[1.29,2)",com.myaempractice.core.filters;version="[1.0,2)",com
+ .myaempractice.core.listeners;version="[1.0,2)",com.myaempractice.cor
+ e.schedulers;version="[1.0,2)",com.myaempractice.core.servlets;versio
+ n="[1.0,2)",javax.servlet;version="[3.1,4)",org.apache.sling.api;vers
+ ion="[2.3,3)",org.apache.sling.api.request;version="[2.7,3)",org.apac
+ he.sling.api.resource;version="[2.13,3)",org.apache.sling.api.resourc
+ e.observation;version="[1.2,2)",org.apache.sling.api.servlets;version
+ ="[2.4,3)",org.apache.sling.models.annotations;version="[1.5,2)",org.
+ apache.sling.models.annotations.injectorspecific;version="[1.1,2)",or
+ g.slf4j;version="[1.7,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="java.lang.R
+ unnable",osgi.service;objectClass:List<String>="javax.servlet.Filter"
+ ;uses:="javax.servlet",osgi.service;objectClass:List<String>="javax.s
+ ervlet.Servlet";uses:="javax.servlet",osgi.service;objectClass:List<S
+ tring>="org.apache.sling.api.resource.observation.ResourceChangeListe
+ ner";uses:="org.apache.sling.api.resource.observation"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
+ nent)(version>=1.5.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
+ e=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.myaempractice.core.filters.LoggingFilt
+ er.xml,OSGI-INF/com.myaempractice.core.listeners.SimpleResourceListen
+ er.xml,OSGI-INF/com.myaempractice.core.schedulers.SimpleScheduledTask
+ .xml,OSGI-INF/com.myaempractice.core.servlets.SimpleServlet.xml
+Sling-Model-Classes: com.myaempractice.core.models.HelloWorldModel
+
